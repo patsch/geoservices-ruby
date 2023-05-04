@@ -30,7 +30,7 @@ module Geoservice
       http = Net::HTTP.new(uri.host, secure ? 443 : uri.port)
       if(secure || uri.scheme == "https")
         http.use_ssl = true
-        http.ssl_version = :TLSv3
+        http.ssl_version = :TLSv1_2
         http.verify_mode = OpenSSL::SSL::VERIFY_NONE
       end
 
